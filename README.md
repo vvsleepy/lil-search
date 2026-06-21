@@ -1,4 +1,4 @@
-#  Lil Search ۶ৎ
+# .✦ ݁˖ Lil Search .✦ ݁˖
 
 A search-as-you-type suggestion system (like the dropdown under a search engine's
 search box). It serves the top 10 popular queries that start with what you're typing,
@@ -10,7 +10,7 @@ ranking and **batch writes** to reduce database load.
 
 ---
 
-## ⚡ Quick Start 
+##  Quick Start 
 
 The only requirement is **Docker Desktop** (running). Then, from the project folder:
 
@@ -376,7 +376,7 @@ of this system .
 * Prefix trie indexing
 * Monitoring and metrics dashboard
 
-## Author
+## ⭐︎ Creator ⭐︎
 
 **Ankita Tripathi**
 
