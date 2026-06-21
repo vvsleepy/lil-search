@@ -165,7 +165,7 @@ After a query is searched, it is added to the recent-activity tracker and immedi
 
 Recent searches receive a temporary ranking boost. In this example, **java** rises above older queries due to recent search activity.
 
-![Trending Ranking](screenshots/4.png)
+![Trending Ranking](/public/screenshots/4.png)
 
 ---
 
@@ -173,7 +173,7 @@ Recent searches receive a temporary ranking boost. In this example, **java** ris
 
 The activity log displays internal system events including cache hits/misses, Redis node routing, batch writes, and score decay operations.
 
-![System Activity Log](screenshots/5.png)
+![System Activity Log](/public/screenshots/5.png)
 
 ## 📊 Dataset
 
