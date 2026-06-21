@@ -141,7 +141,7 @@ docker push <your-dockerhub-user>/typeahead-app:latest
 
 The landing page of Lil Search showing the search box, trending section, and live activity log.
 
-![Home Interface](screenshots/1.png)
+![Home Interface](/public/screenshots/1.png)
 
 ---
 
@@ -149,7 +149,7 @@ The landing page of Lil Search showing the search box, trending section, and liv
 
 Real-time autocomplete suggestions appear as the user types. Results are ranked using a combination of all-time popularity and recent activity scores.
 
-![Typeahead Suggestions](screenshots/2.png)
+![Typeahead Suggestions](/public/screenshots/2.png)
 
 ---
 
@@ -157,7 +157,7 @@ Real-time autocomplete suggestions appear as the user types. Results are ranked 
 
 After a query is searched, it is added to the recent-activity tracker and immediately reflected in the Trending section.
 
-![Search Submission](screenshots/3.png)
+![Search Submission](/public/screenshots/3.png)
 
 ---
 
@@ -362,4 +362,4 @@ write reduction shows batching turning 200 searches into 8 transactions.
 | **Batch writes** (buffer → aggregate → one transaction) | 96% fewer DB writes; `/search` returns instantly | A crash between flushes loses buffered counts |
 
 See [`PROCESS.md`](./PROCESS.md) for the full, step-by-step reasoning behind every part
-of this system (with plain-English definitions of every term).
+of this system .
