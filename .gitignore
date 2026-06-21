@@ -1,0 +1,16 @@
+# Node dependencies (installed with `npm install`, never committed)
+node_modules/
+
+# The generated database file (re-created by `node data/load_data.js`)
+data/queries.db
+data/queries.db-*
+
+# The downloaded raw dataset (too big for git; README explains how to fetch it)
+data/count_1w.txt
+
+# Runtime logs
+logs/*.log
+
+# OS / editor noise
+.DS_Store
+Thumbs.db

@@ -1,0 +1,45 @@
+# This file runs the WHOLE system with one command:
+#   - the Node app (built from the Dockerfile), and
+#   - the "distributed cache": 3 separate Redis servers.
+#
+# Why 3 Redis? So we can demonstrate a *distributed* cache. Our own code
+# (server/cache.js) uses consistent hashing to decide which node owns each prefix.
+#
+# Run everything:        docker compose up --build        (open http://localhost:3000)
+# Run in the background:  docker compose up --build -d
+# Stop everything:        docker compose down
+#
+# Prefer local dev (edit + re-run the app without rebuilding)? Start only Redis:
+#   docker compose up -d redis-0 redis-1 redis-2     then     npm start
+
+services:
+  app:
+    build: .                       # build the image from ./Dockerfile
+    container_name: typeahead-app
+    ports:
+      - "3000:3000"                # open the site at http://localhost:3000
+    environment:
+      # Inside the compose network the app reaches Redis by service name on 6379.
+      - REDIS_NODES=redis-0:6379,redis-1:6379,redis-2:6379
+    depends_on:
+      - redis-0
+      - redis-1
+      - redis-2
+
+  redis-0:
+    image: redis:7-alpine          # small, official Redis image
+    container_name: typeahead-redis-0
+    ports:
+      - "6379:6379"                # host port 6379 -> container port 6379
+
+  redis-1:
+    image: redis:7-alpine
+    container_name: typeahead-redis-1
+    ports:
+      - "6380:6379"                # host port 6380 -> container's 6379
+
+  redis-2:
+    image: redis:7-alpine
+    container_name: typeahead-redis-2
+    ports:
+      - "6381:6379"                # host port 6381 -> container's 6379

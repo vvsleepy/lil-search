@@ -1,0 +1,23 @@
+{
+  "name": "search-typeahead-system",
+  "version": "1.0.0",
+  "description": "A search typeahead system: live suggestions, distributed Redis cache with consistent hashing, trending searches, and batch writes.",
+  "main": "server/index.js",
+  "scripts": {
+    "start": "node server/index.js",
+    "load": "node data/load_data.js",
+    "bench": "node bench/measure.js"
+  },
+  "keywords": [
+    "typeahead",
+    "autocomplete",
+    "consistent-hashing",
+    "redis"
+  ],
+  "license": "MIT",
+  "dependencies": {
+    "better-sqlite3": "^12.11.1",
+    "express": "^5.2.1",
+    "ioredis": "^5.11.1"
+  }
+}

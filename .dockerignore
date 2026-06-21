@@ -1,0 +1,20 @@
+# Files NOT copied into the Docker image.
+# (Comments must be on their own line — Docker has no inline comments.)
+
+# Reinstalled inside the image so the native binaries match Linux.
+node_modules
+
+# Repo and runtime cruft.
+.git
+logs
+
+# The database is rebuilt during the image build.
+data/queries.db
+data/queries.db-shm
+data/queries.db-wal
+
+# The dataset is downloaded fresh during the build.
+data/count_1w.txt
+
+# Report artifact, not needed in the runtime image.
+*.docx

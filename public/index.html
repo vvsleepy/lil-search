@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Lil Search</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="icon" type="image/png" href="favicon.png">
+</head>
+<body>
+  <div class="page">
+
+    <!-- ===== Header ===== -->
+    <header class="hero">
+      <h1 class="logo">Lil Search ୨ৎ </h1>
+
+    </header>
+
+    <!-- ===== Search card ===== -->
+    <section class="card">
+      <label class="field-label" for="search-input">Search box</label>
+      <p class="field-help">
+       ⭑ Type a query to get the top matching suggestions instantly.
+      </p>
+
+      <div class="search-area">
+        <div class="search-row">
+          <input
+            id="search-input"
+            type="text"
+            placeholder="Type to see suggestions…"
+            autocomplete="off"
+            aria-label="Search"
+          />
+          <button id="search-button" type="button">Search</button>
+        </div>
+
+        <!-- Suggestions dropdown -->
+        <ul id="suggestions" class="suggestions" hidden></ul>
+
+        <!-- Status line: loading / error / no-results -->
+        <div id="status" class="status" role="status"></div>
+      </div>
+
+      <!-- Live "behind the scenes" indicator for the most recent lookup -->
+      <div id="lookup-info" class="lookup-info" hidden>
+        <span class="lookup-dot"></span>
+        <span id="lookup-text"></span>
+      </div>
+
+      <!-- The dummy search response shown after you submit a search -->
+      <div id="response" class="response" hidden></div>
+    </section>
+
+    <!-- ===== Trending card ===== -->
+    <section class="card">
+      <h2 class="card-title">Trending now</h2>
+      <p class="field-help">
+      ⭑ Queries gaining popularity based on recent search activity.
+      </p>
+      <ol id="trending" class="trending-list">
+        <li class="empty-row">No recent searches yet.</li>
+      </ol>
+    </section>
+
+    <!-- ===== Activity log card ===== -->
+    <section class="card">
+      <h2 class="card-title">Server activity log</h2>
+      <p class="field-help">
+        ⭑  Live system events including cache activity and database updates.
+      </p>
+      <ul class="legend">
+        <li><code>SUGGEST</code> a typeahead lookup (shows cache HIT/MISS, node, time)</li>
+        <li><code>SEARCH</code> a submitted search (buffered for batch write)</li>
+        <li><code>BATCH</code> buffered searches flushed to the database at once</li>
+        <li><code>CACHEDBG</code> a cache-routing debug check</li>
+        <li><code>DECAY</code> recent-activity scores fading over time</li>
+      </ul>
+      <pre id="logs" class="logs-box">(waiting for activity…)</pre>
+    </section>
+
+    <footer class="foot">
+created by Ankita Tripathi ⭑   </footer>
+
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
