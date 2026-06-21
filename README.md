@@ -363,3 +363,21 @@ write reduction shows batching turning 200 searches into 8 transactions.
 
 See [`PROCESS.md`](./PROCESS.md) for the full, step-by-step reasoning behind every part
 of this system .
+
+## Future Improvements
+
+* Multi-word query support
+* Query typo correction
+* Search analytics dashboard
+* Redis cluster deployment
+* Rate limiting
+* User search history
+* Search personalization
+* Prefix trie indexing
+* Monitoring and metrics dashboard
+
+## Author
+
+**Ankita Tripathi**
+
+Built as a distributed systems and search infrastructure project to explore how modern autocomplete engines combine databases, caching layers, ranking systems, and scalable architectures to deliver low-latency search experiences.
