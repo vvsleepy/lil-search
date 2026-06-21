@@ -1,4 +1,4 @@
-# PROCESS — how we built this, step by step (and why)
+# PROCESS — how I built this, step by step (and why)
 
 This document is the "story" of the project. After each build step we add a section
 explaining **what we did**, **definitions** of any new word, and **why** we chose that

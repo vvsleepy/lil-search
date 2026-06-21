@@ -376,7 +376,7 @@ of this system .
 * Prefix trie indexing
 * Monitoring and metrics dashboard
 
-## ⭐︎ Creator ⭐︎
+## ⭑ Creator ⭑
 
 **Ankita Tripathi**
 
